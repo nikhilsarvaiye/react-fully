@@ -1,2 +1,3 @@
 # react-fully
-a react repository with all inputs, controls, modals, error handling components to get started
+
+A react repository with enterprise-level product experience consists of all inputs, dropdowns, modals, error handling components.

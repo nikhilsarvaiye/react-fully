@@ -1,0 +1,23 @@
+@import './src/styles/_variables'; // '~styles/variables';
+
+.theme-white {
+    border: 0.1em solid $panel-border-color;
+    border-radius: 0.7rem;
+
+    .section-header {
+        color: $panel-heading-text-color;
+        border-bottom: 1px solid $primary-border-color;
+        background-color: $panel-heading-background-color;
+        border-radius: 0.7rem 0.7rem 0rem 0rem;
+        padding: 7px 10px;
+        height: 40px;
+
+        .icon {
+            color: $panel-icon-text-color;
+        }
+    }
+    .section-footer {
+        background-color: $panel-heading-background-color;
+        border-radius: 0rem 0rem 0.7rem 0.7rem;
+    }
+}

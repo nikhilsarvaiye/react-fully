@@ -7,8 +7,7 @@ import generatePackageJson from 'rollup-plugin-generate-package-json';
 // import _package from './package.json'; // instead of '@rollup/plugin-json
 // _package.main -> refers to 'main' entry in package.json file
 
-export default {
-    input: 'src/index.ts',
+const common = {
     plugins: [
         json(),
         sass({ insert: true }),
@@ -21,6 +20,7 @@ export default {
                 devDependencies: {},
                 scripts: {},
             }),
+            outputFolder: 'dist',
         }),
     ],
     output: [
@@ -34,3 +34,40 @@ export default {
     ],
     external: ['react', 'react-dom'],
 };
+
+const entries = [
+    'avatar',
+    'button',
+    'center',
+    'date-picker',
+    'dropdown',
+    'error',
+    'input',
+    'label',
+    'message',
+    'modal',
+    'notification',
+    'number-input',
+    'portal',
+    'scrollbar',
+    'section',
+    'spin',
+    'splitter',
+];
+
+const rollupMultiInputOutput = entries.map((x) => {
+    return {
+        ...common,
+        input: 'src/' + x + '/index.ts',
+        output: [
+            {
+                ...common.output[0],
+                dir: 'dist/' + x,
+            },
+        ],
+    };
+});
+
+console.log(JSON.stringify(rollupMultiInputOutput));
+
+export default rollupMultiInputOutput;

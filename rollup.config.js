@@ -53,6 +53,7 @@ const entries = [
     'section',
     'spin',
     'splitter',
+    'table',
 ];
 
 const rollupMultiInputOutput = entries.map((x) => {

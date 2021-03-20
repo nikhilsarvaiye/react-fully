@@ -1,0 +1,60 @@
+@import './src/styles/_variables'; // '~styles/variables';
+
+.table {
+    font-size: 1rem;
+    background: #fff;
+    $rowPadding: 0.5em;
+
+    .bordered {
+        border: 0.1em solid $primary-border-color;
+    }
+
+    .table-form-fields {
+        .form-field {
+            width: 95%;
+            margin: 0;
+        }
+    }
+
+    .ant-table {
+        .ant-table-body {
+            overflow-y: auto !important;
+        }
+        .ant-table-thead {
+            > tr {
+                > th {
+                    padding: $rowPadding;
+                    background-color: $secondary-body-background-color;
+                }
+            }
+
+            .ant-table-column-sorters {
+                padding: 0;
+            }
+        }
+        .ant-table-tbody {
+            > tr {
+                > td {
+                    padding: $rowPadding;
+                }
+            }
+        }
+        .ant-table {
+            tfoot {
+                > tr {
+                    > th {
+                        padding: $rowPadding;
+                    }
+                    > td {
+                        padding: $rowPadding;
+                    }
+                }
+            }
+        }
+        .ant-spin-nested-loading {
+            .ant-table-container {
+                padding-left: 2em;
+            }
+        }
+    }
+}

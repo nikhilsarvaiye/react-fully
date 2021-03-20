@@ -53,6 +53,7 @@ const entries = [
     'section',
     'spin',
     'splitter',
+    'tooltip',
     'table',
 ];
 

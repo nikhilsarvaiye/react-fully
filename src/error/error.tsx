@@ -1,4 +1,5 @@
 import { Typography } from 'antd';
+import 'antd/lib/typography/style/index.css';
 import './error.scss';
 
 const error = ({ statusCode, message, errors }: any) => {

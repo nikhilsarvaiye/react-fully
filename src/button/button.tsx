@@ -1,6 +1,7 @@
-import { ReactNode, MouseEventHandler, CSSProperties } from 'react';
+import { MouseEventHandler, CSSProperties } from 'react';
 import classNames from 'classnames';
 import { Button as AntdButton } from 'antd';
+import 'antd/lib/button/style/index.css';
 import './button.scss';
 
 export enum ButtonType {

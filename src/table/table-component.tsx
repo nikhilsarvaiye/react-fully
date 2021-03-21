@@ -17,6 +17,7 @@ import {
     TableRowSelection,
 } from 'antd/lib/table/interface';
 import { SizeType } from 'antd/lib/config-provider/SizeContext';
+import 'antd/lib/table/style/index.css';
 
 export enum SortOrder {
     Descend = 'descend',

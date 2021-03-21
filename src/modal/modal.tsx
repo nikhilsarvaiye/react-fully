@@ -2,6 +2,7 @@ import { Fragment } from 'react';
 import classNames from 'classnames';
 import { Modal } from 'antd';
 import { emToPxValue } from './../util/css';
+import 'antd/lib/modal/style/index.css';
 import './modal.scss';
 
 export enum ModelSize {

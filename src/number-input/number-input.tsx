@@ -8,7 +8,7 @@ import {
     ChangeEvent,
     FocusEvent,
 } from 'react';
-import { useIntl } from 'react-intl';
+import { IntlProvider, useIntl } from 'react-intl';
 import { Input, InputType } from './../input';
 import {
     NumberFormatType,
@@ -30,6 +30,7 @@ export interface INumberInputProps {
     endIcon?: ReactNode;
     onEndIconClick?: MouseEventHandler<HTMLSpanElement>;
     format?: NumberFormatType;
+    locale?: string;
 }
 
 export const NumberInput = ({
@@ -45,6 +46,7 @@ export const NumberInput = ({
     endIcon,
     onEndIconClick,
     format = NumberFormatType.Number,
+    locale = 'en',
 }: INumberInputProps) => {
     const [controlValue, setControlValue] = useState(value);
     const { formatNumber } = useIntl();
@@ -119,20 +121,22 @@ export const NumberInput = ({
 
     return (
         <div className="number-text-box">
-            <Input
-                id={id}
-                type={InputType.Text}
-                name={name}
-                value={controlValue}
-                maxLength={maxLength}
-                onChange={handleChange}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                disabled={disabled}
-                placeholder={visiblePlaceholder ? placeholder : ''}
-                endIcon={endIcon}
-                onEndIconClick={onEndIconClick}
-            />
+            <IntlProvider locale={locale}>
+                <Input
+                    id={id}
+                    type={InputType.Text}
+                    name={name}
+                    value={controlValue}
+                    maxLength={maxLength}
+                    onChange={handleChange}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}
+                    disabled={disabled}
+                    placeholder={visiblePlaceholder ? placeholder : ''}
+                    endIcon={endIcon}
+                    onEndIconClick={onEndIconClick}
+                />
+            </IntlProvider>
         </div>
     );
 };

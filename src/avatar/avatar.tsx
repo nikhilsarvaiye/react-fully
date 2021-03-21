@@ -1,7 +1,7 @@
-import React from 'react';
 import { Avatar as AntdAvatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
 import { AvatarSize } from 'antd/lib/avatar/SizeContext';
+import 'antd/lib/avatar/style/index.css';
 
 export const Avatar = ({
     name,

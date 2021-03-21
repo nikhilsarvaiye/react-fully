@@ -21,6 +21,7 @@ import {
     format,
     formatYearToCentury,
 } from './date-picker.validator';
+import 'antd/lib/date-picker/style/index.css';
 import './date-picker.scss';
 
 export interface IDatePickerProps {

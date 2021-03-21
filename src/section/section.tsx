@@ -44,7 +44,7 @@ export interface ISectionProps {
 
 export const Section = ({
     layout = SectionLayoutType.Vertical,
-    theme = SectionTheme.White,
+    theme,
     totalFields,
     autoSpacing,
     align,

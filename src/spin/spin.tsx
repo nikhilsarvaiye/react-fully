@@ -1,4 +1,5 @@
 import { Spin as AntdSpin } from 'antd';
+import 'antd/lib/spin/style/index.css';
 import './spin.scss';
 
 export enum SpinSize {

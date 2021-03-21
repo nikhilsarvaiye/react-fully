@@ -10,7 +10,6 @@ import {
     KeyboardEvent,
     RefObject,
     MouseEventHandler,
-    ChangeEvent,
 } from 'react';
 import classNames from 'classnames';
 import { useDebounce } from './../util/debounce';
